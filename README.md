@@ -1,79 +1,317 @@
+<!--
+  CSS Interview Questions & Answers 2025
+  Refactored for clarity, depth, and modern best practices
+-->
+
 <p align="center">
-  <figure>
-    &nbsp;&nbsp;&nbsp; <img src="./images/css_interview_questions.png" alt="CSS Interview Questions-logo" border="10"   width="100%" 
-    height="100%" />
-    <figcaption align="center">   CSS Interview Questions </figcaption>
-  </figure>
+  <img src="./images/css__logo.png" alt="CSS Interview Questions Logo" width="100%" height="60%" />
+  <br/>
+  <strong style="font-size:1.5em;">100 CSS Interview Questions with Solutions (2025 Edition)</strong>
+  <br/>
+  <em>Curated by Sajib Bhattacharjee</em>
 </p>
 
-<div align="center">
+---
 
-## `100 CSS Interview Questions with Solutions` 🚀
+# 🎨 CSS Interview Questions & Answers 2025
 
-</div>
+Welcome to the ultimate collection of **100 CSS Interview Questions**—from beginner to advanced! This guide is designed to help you master CSS concepts, ace your interviews, and deepen your understanding of modern web styling. Each question includes:
 
-## Table of Contents 📖
-
-1. [Basic CSS Questions](#basic-css-questions)
-2. [CSS Selectors](#css-selectors)
-3. [Box Model](#box-model)
-4. [Positioning](#positioning)
-5. [Flexbox](#flexbox)
-6. [Grid](#grid)
-7. [Responsive Design](#responsive-design)
-8. [Transitions and Animations](#transitions-and-animations)
-9. [CSS Preprocessors](#css-preprocessors)
-10. [Advanced CSS](#advanced-css)
+- ✨ **Detailed explanations**
+- 💡 **Code examples**
+- 🌍 **Real-world use cases**
+- 🏆 **Best practices and tips**
 
 ---
 
-## Basic CSS Questions ✨
+## 📚 Table of Contents
 
-1. **What is CSS?**
-
-   - **Solution:** CSS stands for Cascading Style Sheets. It is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
-
-2. **How do you include CSS in a webpage?**
-
-   - **Solution:** CSS can be included in a webpage in three ways:
-     - ➡️ Inline: Using the `style` attribute inside HTML elements.
-     - ➡️ Internal: Using the `<style>` tag within the `<head>` section.
-     - ➡️ External: Using the `<link>` tag to link an external CSS file.
-
-3. **What is the difference between `margin` and `padding`?**
-
-   - **Solution:** `margin` is the space outside the border of an element, while `padding` is the space inside the border of an element.
-
-4. **What is the box model in CSS?**
-
-   - **Solution:** The CSS box model is a rectangular layout paradigm for HTML elements that consists of the following: content, padding, border, and margin.
-
-5. **What is the difference between `display: none` and `visibility: hidden`?**
-
-   - **Solution:** `display: none` removes the element from the document flow, and it will not take up any space. `visibility: hidden` hides the element, but it still takes up space in the layout.
-
-6. **What is the purpose of the `z-index` property?**
-
-   - **Solution:** The `z-index` property specifies the stack order of an element. An element with a higher `z-index` will be displayed in front of an element with a lower `z-index`.
-
-7. **What is the difference between `em` and `rem` units?**
-
-   - **Solution:** `em` is relative to the font-size of its closest or current element, while `rem` is relative to the font-size of the root element (`<html>`).
-
-8. **What is the `float` property used for?**
-
-   - **Solution:** The `float` property is used to push an element to the left or right, allowing other elements to wrap around it.
-
-9. **What is the difference between `id` and `class` in CSS?**
-
-   - **Solution:** An `id` is unique and can be used to identify a single element, while a `class` can be used to identify multiple elements.
-
-10. **What is the `!important` rule in CSS?**
-    - **Solution:** The `!important` rule is used to override other styling rules for a specific property. It should be used sparingly as it can make debugging difficult.
+1. [✨ Basic CSS Questions](#1-basic-css-questions-✨)
+2. [🎯 CSS Selectors](#css-selectors-🎯)
+3. [📦 Box Model](#box-model-📦)
+4. [📍 Positioning](#positioning-📍)
+5. [💪 Flexbox](#flexbox-💪)
+6. [🌐 Grid](#grid-🌐)
+7. [📱 Responsive Design](#responsive-design-📱)
+8. [🎬 Transitions and Animations](#transitions-and-animations-🎬)
+9. [⚙️ CSS Preprocessors](#css-preprocessors-⚙️)
+10. [🛠️ Advanced CSS](#advanced-css-🛠️)
 
 ---
 
-## CSS Selectors 🎯
+# 1. ✨ Basic CSS Questions
+
+---
+
+### 1. **What is CSS?**
+
+**Answer:**
+CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of HTML or XML documents. It controls the layout, colors, fonts, spacing, and overall visual appearance of web pages.
+
+**Detailed Explanation:**
+
+- CSS separates content (HTML) from presentation (styles), making code more maintainable and scalable.
+- It enables responsive design, accessibility, and consistent branding across web applications.
+
+**Example:**
+
+```css
+body {
+  background-color: #f9f9f9;
+  color: #222;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+```
+
+---
+
+### 2. **How do you include CSS in a webpage?**
+
+**Answer:**
+There are three main ways to include CSS:
+
+- **Inline:** Directly in the HTML element using the `style` attribute.
+- **Internal:** Inside a `<style>` tag within the `<head>` section of the HTML.
+- **External:** Linking to a separate `.css` file using the `<link>` tag.
+
+**Examples:**
+
+```html
+<!-- Inline -->
+<p style="color: blue;">Hello World</p>
+
+<!-- Internal -->
+<head>
+  <style>
+    p {
+      color: green;
+    }
+  </style>
+</head>
+
+<!-- External -->
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+```
+
+**Best Practice:**
+
+> Use external stylesheets for large projects to keep code organized and reusable.
+
+---
+
+### 3. **What is the difference between `margin` and `padding`?**
+
+**Answer:**
+
+- **Margin:** Space outside the border of an element (creates space between elements).
+- **Padding:** Space inside the border, between the border and the content (creates space within an element).
+
+**Visualization:**
+
+```
+| margin | border | padding | content | padding | border | margin |
+```
+
+**Example:**
+
+```css
+div {
+  margin: 20px; /* space outside */
+  padding: 10px; /* space inside */
+  border: 1px solid #ccc;
+}
+```
+
+---
+
+### 4. **What is the box model in CSS?**
+
+**Answer:**
+The CSS box model describes how elements are rendered on the page. Every element is a rectangular box consisting of:
+
+- **Content** (the actual text or image)
+- **Padding** (space around content)
+- **Border** (surrounds the padding)
+- **Margin** (space outside the border)
+
+**Diagram:**
+
+```
++-------------------------+
+|       margin            |
+|  +-------------------+  |
+|  |     border        |  |
+|  |  +-------------+  |  |
+|  |  |  padding    |  |  |
+|  |  | +--------+  |  |  |
+|  |  | |content|  |  |  |
+|  |  | +--------+  |  |  |
+|  |  +-------------+  |  |
+|  +-------------------+  |
++-------------------------+
+```
+
+**Example:**
+
+```css
+.box {
+  margin: 16px;
+  border: 2px solid #333;
+  padding: 8px;
+  width: 200px;
+}
+```
+
+---
+
+### 5. **What is the difference between `display: none` and `visibility: hidden`?**
+
+**Answer:**
+
+- `display: none` removes the element from the document flow; it takes up no space.
+- `visibility: hidden` hides the element, but it still occupies space in the layout.
+
+**Example:**
+
+```css
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+```
+
+**Use Case:**
+
+- Use `display: none` to completely remove elements (e.g., toggling menus).
+- Use `visibility: hidden` when you want to keep the layout but hide the content (e.g., for accessibility or animation purposes).
+
+---
+
+### 6. **What is the purpose of the `z-index` property?**
+
+**Answer:**
+`z-index` controls the stacking order of positioned elements (those with `position` set to `relative`, `absolute`, `fixed`, or `sticky`). Higher `z-index` values appear above lower ones.
+
+**Example:**
+
+```css
+.modal {
+  position: fixed;
+  z-index: 1000;
+}
+.overlay {
+  position: fixed;
+  z-index: 900;
+}
+```
+
+**Tip:**
+
+> Only works on positioned elements. Use for modals, dropdowns, tooltips, etc.
+
+---
+
+### 7. **What is the difference between `em` and `rem` units?**
+
+**Answer:**
+
+- `em`: Relative to the font-size of the current element.
+- `rem`: Relative to the font-size of the root element (`<html>`).
+
+**Example:**
+
+```css
+html {
+  font-size: 16px;
+}
+.parent {
+  font-size: 2em;
+} /* 32px */
+.child {
+  font-size: 1.5em;
+} /* 48px if nested in .parent */
+.child-rem {
+  font-size: 1.5rem;
+} /* 24px always */
+```
+
+**Best Practice:**
+
+> Use `rem` for consistent sizing across the app, and `em` for relative sizing within components.
+
+---
+
+### 8. **What is the `float` property used for?**
+
+**Answer:**
+`float` is used to position elements to the left or right, allowing text and inline elements to wrap around them.
+
+**Example:**
+
+```css
+img {
+  float: left;
+  margin-right: 16px;
+}
+```
+
+**Modern Alternative:**
+
+> Use Flexbox or Grid for layout instead of `float` for most modern designs.
+
+---
+
+### 9. **What is the difference between `id` and `class` in CSS?**
+
+**Answer:**
+
+- `id`: Unique identifier for a single element. Select with `#id`.
+- `class`: Can be used on multiple elements. Select with `.class`.
+
+**Example:**
+
+```html
+<div id="header"></div>
+<div class="card"></div>
+<div class="card"></div>
+```
+
+**Best Practice:**
+
+> Use `class` for styling, and `id` for unique elements or JavaScript hooks.
+
+---
+
+### 10. **What is the `!important` rule in CSS?**
+
+**Answer:**
+The `!important` rule overrides all other declarations for a property, regardless of specificity.
+
+**Example:**
+
+```css
+.button {
+  color: red !important;
+}
+```
+
+**Warning:**
+
+> Use sparingly! Overusing `!important` can make your CSS hard to maintain and debug.
+
+---
+
+[⬆️ Back to Top](#📚-table-of-contents)
+
+---
+
+## 2. 🎯 CSS Selectors
+
+---
 
 11. **What is a CSS selector?**
 
@@ -116,7 +354,9 @@
 
 ---
 
-## Box Model 📦
+## 3. 📦 Box Model
+
+---
 
 21. **What are the components of the CSS box model?**
 
@@ -159,7 +399,9 @@
 
 ---
 
-## Positioning 📍
+## 4. 📍 Positioning
+
+---
 
 31. **What is the `position` property in CSS?**
 
@@ -202,7 +444,9 @@
 
 ---
 
-## Flexbox 💪
+## 5. 💪 Flexbox
+
+---
 
 41. **What is Flexbox?**
 
@@ -245,7 +489,9 @@
 
 ---
 
-## Grid 🌐
+## 6. 🌐 Grid
+
+---
 
 51. **What is CSS Grid?**
 
@@ -288,7 +534,9 @@
 
 ---
 
-## Responsive Design 📱
+## 7. 📱 Responsive Design
+
+---
 
 61. **What is responsive design?**
 
@@ -331,7 +579,9 @@
 
 ---
 
-## Transitions and Animations 🎬
+## 8. 🎬 Transitions and Animations
+
+---
 
 71. **What is the `transition` property?**
 
@@ -374,7 +624,9 @@
 
 ---
 
-## CSS Preprocessors ⚙️
+## 9. ⚙️ CSS Preprocessors
+
+---
 
 81. **What is a CSS preprocessor?**
 
@@ -421,7 +673,9 @@
 
 ---
 
-## Advanced CSS ⚙️
+## 10. 🛠️ Advanced CSS
+
+---
 
 91. **What is the CSS Grid Layout Module?**
 
