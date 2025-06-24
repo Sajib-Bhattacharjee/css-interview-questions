@@ -4,7 +4,7 @@
 -->
 
 <p align="center">
-  <img src="./images/css__logo.png" alt="CSS Interview Questions Logo" width="100%" height="60%" />
+  <img src="./images/css__logo.png" alt="CSS Interview Questions Logo" width="100%" height="600px" />
   <br/>
   <strong style="font-size:1.5em;">100 CSS Interview Questions with Solutions (2025 Edition)</strong>
   <br/>
